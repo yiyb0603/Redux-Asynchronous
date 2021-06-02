@@ -1,6 +1,6 @@
-import * as postApi from 'lib/api/post.api';
 import { ThunkAction } from 'redux-thunk';
 import { RootState } from 'stores';
+import * as postApi from 'lib/api/post.api';
 import { getPostAsync, getPostsAsync } from './post.actions';
 import { GetPostsAction } from './post.type';
 
@@ -16,7 +16,7 @@ export const getPostsThunk = (): ThunkAction<void, RootState, null, GetPostsActi
       dispatch(failure(error));
     }
   };
-}
+} 
 
 export const getPostThunk = (id: number): ThunkAction<void, RootState, null, GetPostsAction> => {
   return async (dispatch) => {
