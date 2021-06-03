@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Counter from './Counter';
+import Posts from './Posts';
 
 const App = (): JSX.Element => {
   return (
@@ -8,7 +8,7 @@ const App = (): JSX.Element => {
         <Route
           exact
           path='/'
-          component={Counter}
+          component={Posts}
         />
       </Switch>
     </BrowserRouter>
