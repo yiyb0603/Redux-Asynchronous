@@ -1,0 +1,17 @@
+.TodoItem {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+
+  &-Close {
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: red;
+    }
+  }
+}

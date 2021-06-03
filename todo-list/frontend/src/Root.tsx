@@ -4,6 +4,7 @@ import store from './stores';
 import App from './components/App';
 
 import 'styles/global.scss';
+import 'styles/palette.scss';
 
 const Root = (): JSX.Element => {
   return (

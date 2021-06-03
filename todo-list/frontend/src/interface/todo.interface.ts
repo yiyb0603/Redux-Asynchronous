@@ -5,3 +5,8 @@ export interface ITodo {
   createdAt: Date;
   updatedAt: Date | null;
 }
+
+export interface ITodoDto {
+  contents: string;
+  isCompleted: boolean;
+}

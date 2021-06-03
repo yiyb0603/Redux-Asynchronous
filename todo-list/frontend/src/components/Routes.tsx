@@ -1,10 +1,15 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import TodoList from './TodoList';
 
 const Routes = (): JSX.Element => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route />
+        <Route
+          exact
+          path='/todos'
+          component={TodoList}
+        />
       </Switch>
     </BrowserRouter>
   );
