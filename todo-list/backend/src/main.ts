@@ -4,7 +4,12 @@ import { AppModule } from './app.module';
 import getProcessEnv from './lib/getProcessEnv';
 
 const bootstrap = async () => {
-  const app: INestApplication = await NestFactory.create(AppModule);
+  const app: INestApplication = await NestFactory.create<INestApplication>(AppModule);
+
+  app.setGlobalPrefix('/api/v1');
+  app.enableCors({
+    origin: '*',
+  });
 
   const PORT: number = Number(getProcessEnv('PORT')) || 8080;
   await app.listen(PORT)
